@@ -20,3 +20,8 @@ class Settings():
         self.game_window_bottom_offset = 50
         self.game_window_left = (self.screen_width - self.game_window_w) / 2
         self.game_window_top = self.screen_height - self.game_window_bottom_offset - self.game_window_h
+
+        ### Shapes
+        self.shape_size = 20
+
+
