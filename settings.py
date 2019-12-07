@@ -13,3 +13,10 @@ class Settings():
         self.title = "Tetris for kids"
         self.screen_icon = pygame.image.load('images/tetris.png')
 
+        # Game window
+        self.game_window_w = 400
+        self.game_window_h = 500
+        self.game_window_color = (255, 255, 255)
+        self.game_window_bottom_offset = 50
+        self.game_window_left = (self.screen_width - self.game_window_w) / 2
+        self.game_window_top = self.screen_height - self.game_window_bottom_offset - self.game_window_h

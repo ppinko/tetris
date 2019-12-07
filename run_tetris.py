@@ -23,6 +23,7 @@ def run_tetris():
 
     while True:
         gf.check_events()
+        gf.blit_game_window(screen, ts)
         pygame.display.flip()
 
 run_tetris()
