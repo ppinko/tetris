@@ -3,7 +3,7 @@
 import pygame
 import sys
 
-def check_events():
+def check_events(element):
     """Checking events and acts accordingly"""
     
     # Collecting all events
@@ -14,6 +14,29 @@ def check_events():
         if event.type == pygame.QUIT:
             pygame.display.quit()
             sys.exit()
+        check_key_downs(event, element)
+        rotate_key(event, element)
+
+def check_key_downs(event, element):
+    """Checking key downs"""
+
+    if event.type == pygame.KEYDOWN:
+        # Moving block down, left and right
+        if event.key == pygame.K_DOWN:
+            element.move_down = True
+        if event.key == pygame.K_LEFT:
+            element.move_left = True
+        if event.key == pygame.K_RIGHT:
+            element.move_right = True
+
+def rotate_key(event, element):
+    """Rotating shape"""
+
+    if event.key == pygame.K_a:
+        element.rotate('left')
+    if even.key == pygame.K_d:
+        element.rotate('right')
+
 
 def blit_game_window(screen, ts):
     """Bliting game window - it does not change during the game"""

@@ -27,3 +27,7 @@ class L_shape(Basic_block):
         for rect in self.rect_list:
             pygame.draw.rect(screen, (255, 255, 0), rect)
 
+    def rotate(self):
+        """Resond to the events from keyboard by rotating the l-shapr"""
+        
+        
